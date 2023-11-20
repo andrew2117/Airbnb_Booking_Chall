@@ -31,46 +31,37 @@ This project is a basic web application that simulates an Airbnb-style reservati
 
 ---
 
-## Evaluation Criteria
-- Code organization and clarity.
-- Functionality and correctness.
-- UI/UX design.
-- Error handling and data display.
+## Steps to Use the Reservation App
 
----
-
-## Steps to Fork and Share the Repository
 1. Fork the Repository:
-
     - Go to the GitHub repository page.
     - Click the 'Fork' button on the top right corner of the page. This creates a copy of the repository in your GitHub account.
 
 2. Clone the Forked Repository:
+    - On your forked repository page, click the 'Code' button and copy the URL.
+    - Open your terminal or command prompt.
+    - Run `git clone [URL]` to clone the repository to your local machine.
 
-    - On your forked repository page, click the 'Code' button and copy the URL.  
-    - Open your terminal or command prompt.  
-    - Run git clone [URL] to clone the repository to your local machine.
+3. Set Up the Weather API Key:
+    - Sign up for a free account on OpenWeatherMap (or any other weather API provider).
+    - Obtain an API key.
+    - Open the `script.js` file in the project directory.
+    - Replace the placeholder `API_KEY` with your actual API key.
 
-3. Implement the Challenge:
+4. Run the Application:
+    - Open the `index.html` file in a web browser.
 
-    - Make the necessary changes and improvements to the codebase as per the challenge requirements.  
-    - Include the steps for the reviewer to run your application, you can delete or modify the content of this README file to include instructions.
+5. Make a Reservation:
+    - Select a date using the date picker.
+    - Enter the number of guests in the input field.
+    - Click the "Submit" button to submit the reservation request.
 
-4. Push Changes:
+6. View Current Reservations:
+    - The current reservations will be displayed in the reservation display area.
 
-    - After making your changes, commit them and push them back to your forked repository.
-    - Use git add ., git commit -m "Your commit message", and git push origin main.
-
-5. Share Your Work:
-
-    - Once you've pushed your changes, share the link to your forked repository as your submission for the challenge.
-
----
-
-## Submission
-Share the link to your forked repository as your submission.
-
----
-
-## Note
-Remember, this is a basic implementation for educational purposes. No real reservations will be processed.
+7. Handling Booking Conflicts:
+    - If there is a booking conflict for the selected date, an error message will be displayed.
+    - Otherwise, a confirmation message will be displayed for successful reservations.
+    - The booking conlficts handled are: 
+            - Arrival date should be less than departure date.
+            - Reservations can't be booked if there is a collision in the range of days with the other reservations.
